@@ -246,6 +246,26 @@ export function Footer() {
             <p className="text-blue-100/70 text-sm leading-relaxed">
               Leading integrated business and operational solutions across Rwanda. We deliver excellence in cleaning, security, training, and more.
             </p>
+            <div className="mt-6">
+              <p className="text-xs uppercase tracking-[0.2em] text-white/40 mb-3">Follow Us</p>
+              <div className="flex items-center gap-4">
+                {[
+                  { Icon: Facebook, href: 'https://www.facebook.com/', label: 'Facebook' },
+                  { Icon: Twitter, href: 'https://x.com/', label: 'X' },
+                  { Icon: Instagram, href: 'https://www.instagram.com/betterfutureinvestments?igsh=MTEyN3puYWR5eWw1NA==', label: 'Instagram' },
+                  { Icon: Linkedin, href: 'https://www.linkedin.com/', label: 'LinkedIn' }
+                ].map(({ Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-blue-100/70 hover:text-accent-500 hover:border-accent-500 transition-all"
+                    aria-label={label}
+                  >
+                    <Icon size={16} />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}

@@ -18,7 +18,7 @@ export function About() {
       <section className="bg-primary-900 py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=2000" 
+            src="/photo-1497366754035-f200968a6e72.png" 
             className="w-full h-full object-cover opacity-20"
             alt="Office background" 
           />
@@ -44,7 +44,7 @@ export function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1573161158521-8034a81863bc?auto=format&fit=crop&q=80&w=1200" 
+                src="/photo-1497366754035-f200968a6e72.png" 
                 alt="Our Team" 
                 className="rounded-3xl shadow-2xl relative z-10"
               />
@@ -129,10 +129,7 @@ export function About() {
               <div key={member.name} className="group flex flex-col items-center text-center">
                 <div className="w-48 h-48 rounded-full overflow-hidden mb-8 border-4 border-gray-50 shadow-xl group-hover:border-accent-500 transition-all duration-500">
                   <img 
-                    src={i === 0 
-                      ? "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400" 
-                      : "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400"
-                    } 
+                    src={i === 0 ? "/Mathias.jpeg" : "/Niyigaba.jpeg"}
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform"
                   />

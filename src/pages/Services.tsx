@@ -1,10 +1,10 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { SERVICES } from '../constants';
-import { CheckCircle2, ArrowRight, ChevronLeft, Sparkles, ShieldCheck, Briefcase, GraduationCap, Users, Hotel, Star } from 'lucide-react';
+import { CheckCircle2, ArrowRight, ChevronLeft, Sparkles, ShieldCheck, Briefcase, GraduationCap, Users, Hotel, Star, Package } from 'lucide-react';
 
 const ICON_MAP: Record<string, any> = {
-  Sparkles, ShieldCheck, Briefcase, GraduationCap, Users, Hotel
+  Sparkles, ShieldCheck, Briefcase, GraduationCap, Users, Hotel, Package
 };
 
 export function Services() {
