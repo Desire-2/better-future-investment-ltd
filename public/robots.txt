@@ -1,0 +1,35 @@
+# Robots.txt for Better Future Investment Ltd
+# Allows search engines to crawl the website
+
+User-agent: *
+Allow: /
+Allow: *.js
+Allow: *.css
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.svg
+Allow: *.avif
+Allow: *.ico
+
+# Disallow private/admin paths (if any)
+Disallow: /admin
+Disallow: /private
+Disallow: /*.env
+
+# Sitemap
+Sitemap: https://www.betterfutureinvestiment.com/sitemap.xml
+
+# Crawl delay (milliseconds between requests)
+Crawl-delay: 1
+
+# Request rate (requests per second)
+Request-rate: 1/1s
+
+# Comment-out section for specific user-agents if needed
+# User-agent: Googlebot
+# Allow: /
+
+# User-agent: Bingbot
+# Allow: /

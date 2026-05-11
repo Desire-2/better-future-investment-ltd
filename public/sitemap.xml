@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.betterfutureinvestiment.com/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://www.betterfutureinvestiment.com/about</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Services Overview -->
+  <url>
+    <loc>https://www.betterfutureinvestiment.com/services</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Individual Service Pages -->
+  <!-- Training Services -->
+  <url>
+    <loc>https://www.betterfutureinvestiment.com/services/training</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Consultancy Services -->
+  <url>
+    <loc>https://www.betterfutureinvestiment.com/services/consultancy</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Supply of Goods -->
+  <url>
+    <loc>https://www.betterfutureinvestiment.com/services/supply-of-goods</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Support Services -->
+  <url>
+    <loc>https://www.betterfutureinvestiment.com/services/support</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Hospitality Services -->
+  <url>
+    <loc>https://www.betterfutureinvestiment.com/services/hospitality</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Cleaning Services -->
+  <url>
+    <loc>https://www.betterfutureinvestiment.com/services/cleaning</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Security Services -->
+  <url>
+    <loc>https://www.betterfutureinvestiment.com/services/security</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.betterfutureinvestiment.com/contact</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
