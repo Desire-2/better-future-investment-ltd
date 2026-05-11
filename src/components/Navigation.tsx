@@ -249,7 +249,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-blue-100/70 text-sm leading-relaxed">
-              Leading integrated business and operational solutions across Rwanda. We deliver excellence in training, consultancy, support, hospitality, cleaning, and security.
+              Leading integrated business and operational solutions across Rwanda. We deliver excellence in training, consultancy, Supply of Goods, support, hospitality, cleaning, and security.
             </p>
             <div className="mt-6">
               <p className="text-xs uppercase tracking-[0.2em] text-white/40 mb-3">Follow Us</p>

@@ -1,8 +1,71 @@
 import { motion } from 'motion/react';
 import { Phone, Mail, MapPin, Send, MessageCircle } from 'lucide-react';
 import { COMPANY_INFO } from '../constants';
+import { useState, useEffect } from 'react';
+import emailjs from 'emailjs-com';
 
 export function Contact() {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    serviceType: 'Training Services',
+    message: ''
+  });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState('');
+
+  useEffect(() => {
+    // Initialize EmailJS with public key from environment variables
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus('');
+
+    try {
+      // Send email using EmailJS with credentials from environment variables
+      const response = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          to_email: import.meta.env.VITE_RECIPIENT_EMAIL,
+          from_name: formData.fullName,
+          from_email: formData.email,
+          service_type: formData.serviceType,
+          message: formData.message,
+          reply_to: formData.email
+        }
+      );
+
+      if (response.status === 200) {
+        setStatus('success');
+        setFormData({
+          fullName: '',
+          email: '',
+          serviceType: 'Training Services',
+          message: ''
+        });
+        setTimeout(() => setStatus(''), 3000);
+      }
+    } catch (error) {
+      console.error('Email send failed:', error);
+      setStatus('error');
+      setTimeout(() => setStatus(''), 3000);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="pt-20">
       <section className="bg-primary-900 py-24 text-white">
@@ -76,13 +139,27 @@ export function Contact() {
             {/* Form */}
             <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl shadow-primary-900/10 border border-gray-50">
               <h3 className="text-3xl font-display font-bold text-primary-900 mb-8 italic">Request a Quote</h3>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              {status === 'success' && (
+                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-2xl">
+                  <p className="text-green-700 font-medium">Thank you! Your inquiry has been sent successfully.</p>
+                </div>
+              )}
+              {status === 'error' && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-2xl">
+                  <p className="text-red-700 font-medium">Failed to send inquiry. Please try again.</p>
+                </div>
+              )}
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Full Name</label>
                     <input 
                       type="text" 
+                      name="fullName"
                       placeholder="John Doe" 
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      required
                       className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500 transition-all"
                     />
                   </div>
@@ -90,7 +167,11 @@ export function Contact() {
                     <label className="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Email Address</label>
                     <input 
                       type="email" 
-                      placeholder="john@company.com" 
+                      name="email"
+                      placeholder="your@email.com" 
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
                       className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500 transition-all"
                     />
                   </div>
@@ -98,27 +179,41 @@ export function Contact() {
                 
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Service Type</label>
-                  <select className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500 transition-all appearance-none cursor-pointer">
-                    <option>Cleaning Services</option>
-                    <option>Security Services</option>
-                    <option>Consultancy Services</option>
+                  <select 
+                    name="serviceType"
+                    value={formData.serviceType}
+                    onChange={handleChange}
+                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500 transition-all appearance-none cursor-pointer"
+                  >
                     <option>Training Services</option>
+                    <option>Consultancy Services</option>
+                    <option>Supply of Goods</option>
                     <option>Support Services</option>
                     <option>Hospitality Services</option>
+                    <option>Cleaning Services</option>
+                    <option>Security Services</option>
                   </select>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Your Message</label>
                   <textarea 
+                    name="message"
                     rows={4}
                     placeholder="Tell us about your requirements..." 
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
                     className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500 transition-all resize-none"
                   />
                 </div>
 
-                <button className="w-full bg-primary-900 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-primary-800 transition-all shadow-xl shadow-primary-900/20">
-                  Send Inquiry <Send size={18} />
+                <button 
+                  type="submit"
+                  disabled={loading}
+                  className="w-full bg-primary-900 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-primary-800 transition-all shadow-xl shadow-primary-900/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {loading ? 'Sending...' : 'Send Inquiry'} <Send size={18} />
                 </button>
               </form>
             </div>

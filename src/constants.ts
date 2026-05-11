@@ -149,7 +149,7 @@ export const COMPANY_INFO = {
   name: 'Better Future Investment Ltd',
   registration: '150034294',
   location: 'Rwanda, Kigali, Gasabo, Remera',
-  phones: ['+250780337341', '0790921526'],
+  phones: ['+250780337341', '+250790921526'],
   emails: ['info@betterfutureinvestiment.com'],
   mission: 'To deliver high-quality, reliable, and innovative services that improve efficiency and create value for our clients.',
   vision: 'To become a leading service provider in Rwanda and across Africa.',

@@ -31,7 +31,7 @@ export function Home() {
               Professional <span className="text-accent-500 underline decoration-accent-500/30">Solutions</span> for a Better Future
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 font-light mb-10 leading-relaxed max-w-2xl">
-              Delivering excellence across Training, Consultancy, Support, Hospitality, Cleaning, and Security services tailored to Rwanda's market.
+              Delivering excellence across Training, Consultancy, Supply of Goods, Support, Hospitality, Cleaning, and Security services tailored to Rwanda's market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
