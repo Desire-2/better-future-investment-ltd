@@ -148,10 +148,9 @@ export const SERVICES: ServiceInfo[] = [
 export const COMPANY_INFO = {
   name: 'Better Future Investment Ltd',
   registration: '150034294',
-  established: 2025,
-  location: 'Kigali city/ GASABO District/ REMERA sector',
+  location: 'Rwanda, Kigali, Gasabo, Remera',
   phones: ['+250780337341', '0790921526'],
-  emails: ['nizeyemaths210@gmail.com'],
+  emails: ['info@betterfutureinvestiment.com'],
   mission: 'To deliver high-quality, reliable, and innovative services that improve efficiency and create value for our clients.',
   vision: 'To become a leading service provider in Rwanda and across Africa.',
   values: ['Integrity', 'Professionalism', 'Excellence', 'Customer Focus', 'Innovation'],

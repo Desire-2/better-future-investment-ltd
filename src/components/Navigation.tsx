@@ -41,14 +41,19 @@ export function Navbar() {
             </a>
             <div className="flex items-center gap-2">
               <MapPin size={14} className="text-accent-500" />
-              <span>Remera, Kigali</span>
+              <span>{COMPANY_INFO.location}</span>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <span className="text-xs uppercase tracking-widest text-white/20">Follow Us</span>
             <div className="flex items-center gap-3">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="hover:text-accent-500 transition-colors">
+              {[
+                { Icon: Facebook, href: 'https://www.facebook.com/', label: 'Facebook' },
+                { Icon: Twitter, href: 'https://x.com/', label: 'X' },
+                { Icon: Instagram, href: 'https://www.instagram.com/betterfutureinvestments?igsh=MTEyN3puYWR5eWw1NA==', label: 'Instagram' },
+                { Icon: Linkedin, href: 'https://www.linkedin.com/', label: 'LinkedIn' }
+              ].map(({ Icon, href, label }) => (
+                <a key={label} href={href} className="hover:text-accent-500 transition-colors" aria-label={label}>
                   <Icon size={14} />
                 </a>
               ))}
@@ -244,16 +249,16 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-blue-100/70 text-sm leading-relaxed">
-              Leading integrated business and operational solutions across Rwanda. We deliver excellence in cleaning, security, training, and more.
+              Leading integrated business and operational solutions across Rwanda. We deliver excellence in training, consultancy, support, hospitality, cleaning, and security.
             </p>
             <div className="mt-6">
               <p className="text-xs uppercase tracking-[0.2em] text-white/40 mb-3">Follow Us</p>
               <div className="flex items-center gap-4">
                 {[
-                  { Icon: Facebook, href: 'https://www.facebook.com/', label: 'Facebook' },
-                  { Icon: Twitter, href: 'https://x.com/', label: 'X' },
+                  { Icon: Facebook, href: 'https://web.facebook.com/profile.php?id=61589819660875/', label: 'Facebook' },
+                  { Icon: Twitter, href: 'https://x.com/Betterfutur2025/', label: 'X' },
                   { Icon: Instagram, href: 'https://www.instagram.com/betterfutureinvestments?igsh=MTEyN3puYWR5eWw1NA==', label: 'Instagram' },
-                  { Icon: Linkedin, href: 'https://www.linkedin.com/', label: 'LinkedIn' }
+                  { Icon: Linkedin, href: ' https://www.linkedin.com/in/better-future-investment-limited-788805409/', label: 'LinkedIn' }
                 ].map(({ Icon, href, label }) => (
                   <a
                     key={label}
@@ -283,10 +288,12 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-display font-semibold mb-6">Services</h4>
             <ul className="space-y-4 text-sm text-blue-100/70">
+              <li><Link to="/services/training" className="hover:text-accent-500 transition-colors">Training</Link></li>
+              <li><Link to="/services/consultancy" className="hover:text-accent-500 transition-colors">Consultancy</Link></li>
+              <li><Link to="/services/support" className="hover:text-accent-500 transition-colors">Support</Link></li>
+              <li><Link to="/services/hospitality" className="hover:text-accent-500 transition-colors">Hospitality</Link></li>
               <li><Link to="/services/cleaning" className="hover:text-accent-500 transition-colors">Cleaning</Link></li>
               <li><Link to="/services/security" className="hover:text-accent-500 transition-colors">Security</Link></li>
-              <li><Link to="/services/consultancy" className="hover:text-accent-500 transition-colors">Consultancy</Link></li>
-              <li><Link to="/services/training" className="hover:text-accent-500 transition-colors">Training</Link></li>
             </ul>
           </div>
 

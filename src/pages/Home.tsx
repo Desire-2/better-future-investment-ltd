@@ -25,13 +25,13 @@ export function Home() {
             className="max-w-3xl"
           >
             <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] uppercase bg-accent-500 text-primary-900 rounded-full">
-              Established 2025 • Rwanda
+              Rwanda • Professional Services
             </span>
             <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-6">
               Professional <span className="text-accent-500 underline decoration-accent-500/30">Solutions</span> for a Better Future
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 font-light mb-10 leading-relaxed max-w-2xl">
-              Delivering excellence across Cleaning, Security, Consultancy, and Training services tailored to Rwanda's market.
+              Delivering excellence across Training, Consultancy, Support, Hospitality, Cleaning, and Security services tailored to Rwanda's market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
@@ -59,7 +59,6 @@ export function Home() {
               { label: 'Excellence In', value: 'Rwanda' },
               { label: 'Core Services', value: '6+' },
               { label: 'Client Focus', value: '100%' },
-              { label: 'Established', value: '2025' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <p className="text-primary-900/60 text-xs font-bold uppercase tracking-widest mb-1">{stat.label}</p>
@@ -165,8 +164,7 @@ export function Home() {
                   className="rounded-2xl w-full h-full object-cover shadow-2xl grayscale"
                 />
                 <div className="absolute bottom-12 -left-8 bg-accent-500 text-primary-900 p-6 rounded-2xl shadow-xl max-w-[200px]">
-                  <p className="text-3xl font-display font-bold mb-1">2025</p>
-                  <p className="text-xs font-bold leading-tight">Establishing a Better Future in Rwanda</p>
+                  <p className="text-sm font-bold leading-tight">A Better Future for Rwanda</p>
                 </div>
               </div>
             </div>

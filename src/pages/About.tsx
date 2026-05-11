@@ -44,7 +44,7 @@ export function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <img 
-                src="/photo-1497366754035-f200968a6e72.png" 
+                src="https://images.unsplash.com/photo-1573161158521-8034a81863bc?auto=format&fit=crop&q=80&w=1200" 
                 alt="Our Team" 
                 className="rounded-3xl shadow-2xl relative z-10"
               />
@@ -56,7 +56,7 @@ export function About() {
               <h3 className="text-4xl font-display font-bold text-primary-900 mb-8">Professional Excellence Rooted in Rwanda</h3>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  BETTER FUTURE INVESTMENT LTD is a Rwanda based company established in 2025, delivering integrated solutions across cleaning, security, consultancy, training, support, and hospitality services.
+                  BETTER FUTURE INVESTMENT LTD is a Rwanda based company delivering integrated solutions across cleaning, security, consultancy, training, support, and hospitality services.
                 </p>
                 <p>
                   We serve organizations, NGOs, and individuals with professional expertise, reliability, and a strong commitment to excellence. We are entitled to provide affordable, flexible, and high quality services through a trusted and well-trained team.

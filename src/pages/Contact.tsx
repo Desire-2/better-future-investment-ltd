@@ -64,22 +64,13 @@ export function Contact() {
                     <div>
                       <h4 className="text-xl font-display font-bold text-primary-900 mb-2">Office Location</h4>
                       <p className="text-gray-600 font-medium italic">
-                        {COMPANY_INFO.location}, Rwanda
+                        {COMPANY_INFO.location}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-primary-900 p-8 rounded-3xl text-white flex items-center justify-between">
-                <div>
-                  <h5 className="font-display font-bold text-xl mb-1">Registration</h5>
-                  <p className="text-accent-500 font-mono text-sm">{COMPANY_INFO.registration}</p>
-                </div>
-                <div className="px-4 py-2 bg-white/10 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">
-                  Established 2025
-                </div>
-              </div>
             </div>
 
             {/* Form */}
@@ -149,7 +140,7 @@ export function Contact() {
          <div className="absolute top-8 left-8 bg-white p-6 rounded-2xl shadow-2xl border border-gray-100 max-w-sm pointer-events-none">
             <h5 className="font-display font-bold text-primary-900 text-xl mb-2">Our Office</h5>
             <p className="text-gray-500 text-sm leading-relaxed mb-4">
-              {COMPANY_INFO.location}, Rwanda
+              {COMPANY_INFO.location}
             </p>
             <div className="flex gap-2">
               <span className="px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold uppercase rounded-full border border-green-100">Open Now</span>
