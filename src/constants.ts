@@ -151,8 +151,8 @@ export const COMPANY_INFO = {
   location: 'Rwanda, Kigali, Gasabo, Remera',
   phones: ['+250780337341', '+250790921526'],
   emails: ['info@betterfutureinvestiment.com'],
-  mission: 'To deliver high-quality, reliable, and innovative services that improve efficiency and create value for our clients.',
-  vision: 'To become a leading service provider in Rwanda and across Africa.',
+  mission: 'To deliver reliable, affordable, and high-quality services that improve efficiency, create value, and support the growth of our clients through professionalism, innovation, and excellence.',
+  vision: 'Becoming a lead and trusted provider of integrated business solutions in Rwanda and across Globe.',
   values: ['Integrity', 'Professionalism', 'Excellence', 'Customer Focus', 'Innovation'],
   team: [
     {
