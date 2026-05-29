@@ -163,9 +163,6 @@ export function Home() {
                   alt="Business Growth" 
                   className="rounded-2xl w-full h-full object-cover shadow-2xl grayscale"
                 />
-                <div className="absolute bottom-12 -left-8 bg-accent-500 text-primary-900 p-6 rounded-2xl shadow-xl max-w-[200px]">
-                  <p className="text-sm font-bold leading-tight">A Better Future for Rwanda</p>
-                </div>
               </div>
             </div>
           </div>
